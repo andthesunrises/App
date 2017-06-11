@@ -50,3 +50,9 @@ To run the Rails server on C9, the command is:
 rails s -b $IP -p $PORT
 ```
 
+to clear out git cache
+
+```
+git rm . -r --cached
+```
+
