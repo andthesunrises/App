@@ -22,3 +22,31 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+
+To startup the Postgres database, the command is:
+
+```
+sudo service postgresql start
+```
+
+To generate a new rails application, the command is:
+
+```
+rails new AppName -T --database=postgresql
+```
+
+
+Create and migrate the database:
+
+```
+rails db:create && rails db:migrate
+```
+
+To run the Rails server on C9, the command is:
+
+```
+rails s -b $IP -p $PORT
+```
+
