@@ -1,4 +1,7 @@
 class Portfolio < ApplicationRecord
+  
+  has_many  :technologies
+  
   #inclue the little concern for placeholder image generator
   include Placeholder
   
