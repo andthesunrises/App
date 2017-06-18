@@ -3,6 +3,7 @@ class PortfoliosController < ApplicationController
     @portfolio_item = Portfolio.all
   end
   
+  #hard-code angular controller
   def angular
     @angular_portfolio_item = Portfolio.angular
   end
