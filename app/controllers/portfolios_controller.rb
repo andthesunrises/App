@@ -3,12 +3,19 @@ class PortfoliosController < ApplicationController
     @portfolio_item = Portfolio.all
   end
   
+  #hard-code angular controller
+  def angular
+    @angular_portfolio_item = Portfolio.angular
+  end
+  
   def new
     @portfolio_item = Portfolio.new
+    3.times { @portfolio_item.technologies.build }
   end
 
+  #now also passes technologies attributes and does strong param
   def create
-    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body))
+    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
 
     respond_to do |format|
       if @portfolio_item.save
@@ -37,7 +44,7 @@ class PortfoliosController < ApplicationController
   def show
     @portfolio_item = Portfolio.find(params[:id])
   end
-
+  
   def destroy
     # Performs the look up for the record
     @portfolio_item = Portfolio.find(params[:id])
