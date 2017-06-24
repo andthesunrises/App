@@ -57,8 +57,10 @@ class PortfoliosController < ApplicationController
   end
 
   # only to be used inside this class
+  # these are repeated codes that gets called often
   private
   
+  #good practice to break parameters into different lines if line too long
   def portfolio_params
     params.require(:portfolio).permit(:title, 
                                       :subtitle, 
