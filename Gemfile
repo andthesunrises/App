@@ -55,3 +55,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise', '~> 4.2'
+
+gem 'bootstrap', '~> 4.0.0.alpha6'
+
+gem 'popper', '~> 0.2.5'
