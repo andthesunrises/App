@@ -59,3 +59,7 @@ gem 'devise', '~> 4.2'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
 gem 'popper', '~> 0.2.5'
+
+gem 'ky_view_tool', git: 'git@github.com:andthesunrises/ky_view_tool.git'
+
+gem 'petergate', '~> 1.6', '>= 1.6.3'
