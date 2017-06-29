@@ -62,4 +62,4 @@ gem 'popper', '~> 0.2.5'
 
 gem 'ky_view_tool', git: 'git@github.com:andthesunrises/ky_view_tool.git'
 
-gem 'petergate', '~> 1.6', '>= 1.6.3'
+gem 'petergate', '~> 1.7', '>= 1.7.5'
