@@ -8,6 +8,9 @@ class Portfolio < ApplicationRecord
   #inclue the little concern for placeholder image generator
   include Placeholder
   
+  mount_uploader :thumb_image, PortfolioUploader
+  mount_uploader :main_image, PortfolioUploader
+  
   validates_presence_of :title, :subtitle, :body, :main_image, :thumb_image  
   
   def self.angular

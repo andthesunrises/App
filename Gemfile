@@ -63,3 +63,14 @@ gem 'popper', '~> 0.2.5'
 gem 'ky_view_tool', git: 'git@github.com:andthesunrises/ky_view_tool.git'
 
 gem 'petergate', '~> 1.7', '>= 1.7.5'
+
+
+#image stuff
+
+gem 'carrierwave', '~> 1.1'
+
+gem 'mini_magick', '~> 4.7', '>= 4.7.2'
+
+gem 'carrierwave-aws', '~> 1.1'
+
+gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
