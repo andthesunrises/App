@@ -64,6 +64,7 @@ gem 'ky_view_tool', git: 'git@github.com:andthesunrises/ky_view_tool.git'
 
 gem 'petergate', '~> 1.7', '>= 1.7.5'
 
+<<<<<<< HEAD
 
 #image stuff
 
@@ -74,3 +75,9 @@ gem 'mini_magick', '~> 4.7', '>= 4.7.2'
 gem 'carrierwave-aws', '~> 1.1'
 
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
+=======
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
+
+#pagination
+gem 'kaminari', '~> 0.16.3'
+
