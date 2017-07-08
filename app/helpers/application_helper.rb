@@ -16,3 +16,7 @@ module ApplicationHelper
     end
   end
 end
+
+def copyright_generator
+  KyViewTool::Renderer.copyright 'Kenneth Yu', 'All rights reserved'
+end

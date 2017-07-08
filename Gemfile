@@ -63,3 +63,8 @@ gem 'popper', '~> 0.2.5'
 gem 'ky_view_tool', git: 'git@github.com:andthesunrises/ky_view_tool.git'
 
 gem 'petergate', '~> 1.7', '>= 1.7.5'
+
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
+
+#pagination
+gem 'kaminari', '~> 0.16.3'
