@@ -16,6 +16,18 @@ class BlogsController < ApplicationController
   def show
     @page_title = @blog.title
     @seo_keywords = @blog.body
+    respond_to do |format|
+      format.html
+      format.pdf do
+        pdf = Prawn::Document.new
+        pdf.text "This is a Vector PDF render for Minecraft Character"
+        pdf.text "This is the second line of text"
+        pdf.rectangle([300, 300], 100, 200, 20) 
+        send_data pdf.render, filename: 'Minecraft_skin_render.pdf', 
+                              type: "application/pdf",
+                              disposition: "inline"
+      end
+    end
   end
 
   # GET /blogs/new
