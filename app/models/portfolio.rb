@@ -4,10 +4,7 @@ class Portfolio < ApplicationRecord
   accepts_nested_attributes_for :technologies, 
                                 reject_if: lambda { |attrs| attrs['name'].blank? }
   
-  
-  #inclue the little concern for placeholder image generator
-  include Placeholder
-  validates_presence_of :title, :subtitle, :body, :main_image, :thumb_image  
+  validates_presence_of :title, :subtitle, :body
   
   mount_uploader :thumb_image, PortfolioUploader
   mount_uploader :main_image, PortfolioUploader
@@ -17,19 +14,10 @@ class Portfolio < ApplicationRecord
     where(subtitle: 'Angular')
   end
   
-  scope :ruby_on_rails_portfolio_items, -> {where(subtitle: 'Ruby on Rails')}
-  
-  after_initialize :set_defaults
-  
-  #setting default values for each of the field, do not use =, but use ||=, it checks if empty first.
-  # if self.main_image == nil
-  # self.main_image = "whateveR"
-  def set_defaults
-    self.main_image ||= Placeholder.image_generator(height: '600', width: '400')
-    self.thumb_image ||= Placeholder.image_generator(height: '350', width: '200')
-  end
-  
   def self.by_position
     order("position ASC")
   end
+  
+  scope :ruby_on_rails_portfolio_items, -> {where(subtitle: 'Ruby on Rails')}
 end
+
