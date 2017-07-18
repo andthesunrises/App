@@ -266,7 +266,7 @@ DEPENDENCIES
   petergate (~> 1.7, >= 1.7.5)
   pg (~> 0.18)
   popper (~> 0.2.5)
-  prawn (~> 2.1)
+  prawn (~> 2.2, >= 2.2.2)
   puma (~> 3.0)
   rails (~> 5.0.1)
   sass-rails (~> 5.0)

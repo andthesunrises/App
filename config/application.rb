@@ -13,6 +13,11 @@ require "sprockets/railtie"
 require "dotenv-rails"
 # require "rails/test_unit/railtie"
 
+
+require "prawn"
+Prawn::Document.generate("hello.pdf") do
+  text "Hello World!"
+end
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
